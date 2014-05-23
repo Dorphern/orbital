@@ -47,6 +47,32 @@ describe('Match', function() {
       assert.isTrue(Match.check(undef, Match.Nullable(Match.Undefined)));
       assert.isFalse(Match.check(234, Match.Nullable(String)));
     });
+
+    it('can check Arrays', function() {
+      assert.isTrue(Match.check([], [String]));
+      assert.isTrue(Match.check([2, 4], []));
+      assert.isTrue(Match.check([2, String], []));
+      assert.isTrue(Match.check([2, String], Array));
+      assert.isTrue(Match.check(['one', 'two'], [String]));
+      assert.isTrue(Match.check(['one', 'two'], Array(String)));
+
+      assert.isFalse(Match.check([2, 5], [String]));
+      assert.isFalse(Match.check([2, 'str'], [String]));
+      assert.isFalse(Match.check('somestr', [String]));
+    });
+
+    it('can check Tuples', function() {
+      var args = ['somestr', 123];
+      assert.isTrue(Match.check(args, Match.Tuple(String, Number)));
+      assert.isFalse(Match.check(args, Match.Tuple(Number)));
+      assert.isFalse(Match.check(args, Match.Tuple(Number, String)));
+      assert.isFalse(Match.check(args, Match.Tuple(String, Number, Boolean)));
+      assert.isFalse(Match.check(args, Match.Tuple()));
+    });
   });
+  
+  describe('checkTuple()', function() {
+  
+  })
 });
 
