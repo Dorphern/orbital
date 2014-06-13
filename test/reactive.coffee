@@ -38,4 +38,17 @@ describe 'Reactive', ->
       assert(areaLifted.get() == 15, "should equal 15")
       width.set(5)
       assert(areaLifted.get() == 25, "should equal 25")
+      height.set(10)
+      assert(areaLifted.get() == 50, "should equal 50")
+
+
+  describe 'map()', ->
+    it 'lifts itself immediately', ->
+      v = new Reactive('one two three four five six')
+      asList = v.map((t) -> t.split(' '))
+      assert.sameMembers(asList.get(),
+        ['one', 'two', 'three', 'four', 'five', 'six'])
+
+      v.set('first second third')
+      assert.sameMembers(asList.get(), ['first', 'second', 'third'])
       
