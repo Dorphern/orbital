@@ -1,0 +1,41 @@
+
+Comet   = require('../')
+assert  = require('chai').assert
+  
+Reactive = Comet.Reactive
+
+describe 'Reactive', ->
+  
+  react = null
+
+  beforeEach ->
+    react = new Reactive()
+
+
+  it 'can init with a value', ->
+    r = new Reactive(4)
+    assert(r.get() == 4)
+
+  describe 'get()', ->
+    it 'changes when set', ->
+      initVal = react.get()
+      react.set(5)
+      assert(react.get() == 5 && initVal != react.get())
+
+  describe 'onchange()', ->
+    it 'calls all bound methods', ->
+      somevar = null
+      react.onchange((v) -> somevar = v)
+      react.set(100)
+      assert(somevar == 100)
+
+  describe 'lift()', ->
+    it 'lifts a function', ->
+      area = Reactive.lift((w, h) -> w * h)
+      width = new Reactive(3)
+      height = new Reactive(5)
+      areaLifted = area(width, height)
+      assert(areaLifted.get() == 15, "should equal 15")
+      width.set(5)
+      assert(areaLifted.get() == 25, "should equal 25")
+      
