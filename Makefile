@@ -1,4 +1,4 @@
-MOCHA_OPTS = --check-leaks --watch
+MOCHA_OPTS = --check-leaks --watch --compilers coffee:coffee-script/register
 REPORTER = dot
 
 check: test
