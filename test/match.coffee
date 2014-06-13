@@ -1,8 +1,8 @@
 
-Comet   = require('../')
+Orbital = require('../')
 assert  = require('chai').assert
   
-Match = Comet.Match
+Match = Orbital.Match
 
 describe 'Match', ->
   

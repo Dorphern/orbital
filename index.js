@@ -1,3 +1,3 @@
 
-module.exports = require('./lib/comet');
+module.exports = require('./lib/orbital');
 

@@ -1,8 +1,8 @@
 
-Comet   = require('../')
+Orbital = require('../')
 assert  = require('chai').assert
   
-Reactive = Comet.Reactive
+Reactive = Orbital.Reactive
 
 describe 'Reactive', ->
   
