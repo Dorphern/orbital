@@ -1,7 +1,7 @@
 {
-  "name": "Comet",
+  "name": "Orbital.js",
   "version": "0.0.0",
-  "description": "Comet is a realtime client / server toolbox",
+  "description": "Orbital.js is a realtime client / server toolbox",
   "dependencies": {
   
   },
