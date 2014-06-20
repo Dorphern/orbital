@@ -1,6 +1,7 @@
 {
   "name": "Orbital.js",
   "version": "0.0.0",
+  "clientVersion": "0.0.0",
   "description": "Orbital.js is a realtime client / server toolbox",
   "dependencies": {
   
