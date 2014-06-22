@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "clientVersion": "0.0.0",
   "description": "Orbital.js is a realtime client / server toolbox",
-  "dependencies": {
-  
-  },
+  "dependencies": {},
   "devDependencies": {
     "chai": "*",
     "mocha": "*",
-    "coffee-script": "*"
+    "coffee-script": "*",
+    "browserify": "^4.1.11"
   },
   "scripts": {
     "test": "make test"
