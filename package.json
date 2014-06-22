@@ -8,7 +8,7 @@
     "url": "https://github.com/Dorphern/orbital"
   },
   "bugs": {
-    "https://github.com/Dorphern/orbital/issues"
+    "url": "https://github.com/Dorphern/orbital/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -24,6 +24,6 @@
     {
       "name": "Kristoffer Dorph",
       "email": "kristofferdo@gmail.com"
-    }   
+    } 
   ]
 }
