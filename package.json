@@ -3,6 +3,13 @@
   "version": "0.0.1",
   "clientVersion": "0.0.0",
   "description": "Orbital is a realtime client / server toolbox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dorphern/orbital"
+  },
+  "bugs": {
+    "https://github.com/Dorphern/orbital/issues"
+  },
   "dependencies": {},
   "devDependencies": {
     "chai": "*",
@@ -12,5 +19,11 @@
   },
   "scripts": {
     "test": "make test"
-  }
+  },
+  "contributers": [
+    {
+      "name": "Kristoffer Dorph",
+      "email": "kristofferdo@gmail.com"
+    }   
+  ]
 }
