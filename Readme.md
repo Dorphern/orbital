@@ -1,3 +1,3 @@
-Comet JS
-========
+Orbital JS
+==========
 
